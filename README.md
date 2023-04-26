@@ -1,2 +1,3 @@
-# portfoliojk
-Personal project portfolio website =)
+#This thematic portfolio contains animations, references to films, anime, cartoons and science fiction.
+
+<img src="media/works/1682536377_1612_26.04.2023_1343x609.jpg"> <br /> <br />
