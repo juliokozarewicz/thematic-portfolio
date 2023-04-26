@@ -5,7 +5,7 @@ This thematic portfolio was developed, for study, with Django, Javascript, HTML 
 </p>
 
 <h2>Home page</h2>
-<img src="media/works/1682536377_1612_26.04.2023_1343x609.jpg"> <br /> <br />
+<img src="media/works/1682541918_1745_26.04.2023_1338x606.jpg"> <br /> <br />
 
 <h2>Work</h2>
 <img src="media/works/1682536412_1613_26.04.2023_1342x606.jpg"> <br /> <br />
