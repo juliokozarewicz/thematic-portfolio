@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Remember to look up at the stars and not down at your feet. Try to make sense of what you see and wonder about what makes the universe exist. (Stephen Hawking)"/>
+    <link rel="stylesheet" href="{% static '/core/css/base.css' %}">
+	<link rel="shortcut icon" type="image/x-icon" href="{% static '/core/images/favicon.svg' %}">
+	<script src="{% static '/core/js/base.js' %}"></script>
+    {% block htmlhead %}
+        <title>JULIO KOZAREWICZ</title>
+    {% endblock htmlhead %}
+</head>
+
+<body onload="paralax('paralax', 'img'), paralax('paralax', 'div')">
+    <section class="content">
+        <nav>
+            <div class="menuall" id="idmenuall">
+                <div class="mhamb" id="idmhamb" onclick="new status_menu()">
+                    <div class="line1" id="idline1"></div>
+                    <div class="line2" id="idline2"></div>
+                    <div class="line3" id="idline3"></div>
+                </div>
+                <div class="menulist" id="idmenulist" >
+                    <div class="sep">------------------------</div>
+                    <p class="menu">MENU</p>
+                    <div class="sep">------------------------</div>
+                    <a onclick="location.href='/about'" >About</a>
+                    <a onclick="location.href='/work'" >Work</a>
+                    <a onclick="window.open('{% static '/core/media/julio-kozarewicz-cv-en.pdf' %}', '_blank')" >Resume</a>
+                    <a onclick="location.href='/contact'" >Contact</a>
+                    <div class="sep">------------------------</div>
+                </div>
+            </div>
+        </nav>
+        {% block content %}
+    	{% endblock %}
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,495 @@
+@import url("colors.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: title;
+}
+
+html, body {
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body .content nav {
+    display: none;
+}
+
+body section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+}
+
+body section video {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+#geral {
+    position: fixed;
+    width: 80vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#borderframe {
+    position: relative;
+    width: 65vh;
+    height: 80vh;
+    border: 0.6vh solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#frameblack {
+    position: relative;
+    width: 60vh;
+    height: 60vh;
+    background-color: black;
+    opacity: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contalternative {
+    position: relative;
+    width: 60vh;
+    height: 13vh;
+    background-color: black;
+    margin-top: 2vh;
+    opacity: 80%;
+}
+
+#contalternative p {
+    width: 60vh;
+    height: 4vh;
+    color: white;
+    font-size: 1.8vh;
+    font-family: title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logosalt {
+    position: absolute;
+    width: 60vh;
+    height: 8.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+}
+
+#zaplogo, #emailogo {
+    height: 5vh;
+    width: 5vh;
+    cursor: pointer;
+}
+
+#boxdow {
+    position: relative;
+    width: 65vh;
+    height: 5vh;
+    margin-top: 1.3vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#backhomef {
+    width: 65vh;
+    height: 5vh;
+    background-color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vh;
+    font-family: title;
+    opacity: 80%;
+}
+
+#backhomef:hover {
+    background-color: white;
+    color: black;
+}
+
+/* init audio control */
+#audiocontrol {
+    position: fixed;
+    bottom: 2vh;
+    right: 2vh;
+    height: 5vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 80%;
+}
+
+#idallaudio {
+    cursor: pointer;
+    background-image: url("../images/audio-ok.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 5vh;
+    width: 5vh;
+}
+
+#idaudiocheck:checked + #idallaudio {
+    background-image: url("../images/audio-muted.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 5vh;
+    width: 5vh;
+}
+/* end audio control */
+
+#blockvideo {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+#frametitle {
+    width: 90%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vh;
+}
+
+#idform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=text], input[type=email] {
+    font-size: 2vh;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: 0.2vh solid rgb(150, 150, 150);
+    margin-top: 2vh;
+    width: 50vh;
+    height: 5vh;
+    padding-left: 1.5vh;
+}
+
+#id_message {
+    font-size: 2vh;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: 0.2vh solid rgb(150, 150, 150);
+    margin-top: 2vh;
+    width: 50vh;
+    height: 18vh;
+    padding-left: 1.5vh;
+    padding-top: 1.5vh;
+    resize:none;
+}
+
+input:focus,
+#id_message:focus
+{
+    border: 0.35vh solid white;
+}
+
+
+#id_message::placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+#idsubmit {
+    position: relative;
+    right: 0vh;
+    width: 25vh;
+    height: 5vh;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 3vh;
+    font-size: 2vh;
+}
+
+#idsubmit:hover {
+    opacity: 60%;
+}
+
+#idframeerror {
+    position: absolute;
+    top: -9vh;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.classerror {
+    position: relative;
+    top: 2vh;
+    font-size: 1.5vh;
+    width: 70vh;
+    height: 6vh;
+    color: white;
+    background-color: rgb(225, 21, 21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5vh;
+    border-radius: 0.5vh;
+}
+
+#closeerror {
+    position: absolute;
+    top: 0vh;
+    right: 0.5vh;
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+/* ##### */
+/* other devices */
+@media (max-width: 900px) {
+
+    #geral {
+        position: fixed;
+        width: 95%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    #borderframe {
+        position: relative;
+        width: 95%;
+        height: 80vh;
+        border: 0.6vh solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #frameblack {
+        position: relative;
+        width: 95%;
+        height: 60vh;
+        background-color: black;
+        opacity: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #frametitle {
+        width: 90%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2vh;
+    }
+
+    input[type=text], input[type=email] {
+        font-size: 2vh;
+        color: white;
+        background-color: transparent;
+        outline: none;
+        border: 0.2vh solid rgb(150, 150, 150);
+        margin-top: 2vh;
+        width: 90%;
+        height: 5vh;
+        padding-left: 1.5vh;
+    }
+    
+    #id_message {
+        font-size: 2vh;
+        color: white;
+        background-color: transparent;
+        outline: none;
+        border: 0.2vh solid rgb(150, 150, 150);
+        margin-top: 2vh;
+        width: 90%;
+        height: 18vh;
+        padding-left: 1.5vh;
+        padding-top: 1.5vh;
+        resize:none;
+    }
+
+    #idform {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input:focus,
+    #id_message:focus
+    {
+        border: 0.35vh solid white;
+    }
+
+    #boxdow {
+        position: relative;
+        width: 95%;
+        height: 5vh;
+        margin-top: 1.3vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    #backhomef {
+        width: 100%;
+        height: 5vh;
+        background-color: black;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7vh;
+        font-family: title;
+        opacity: 80%;
+    }
+
+    #contalternative {
+        position: relative;
+        width: 95%;
+        height: 13vh;
+        background-color: black;
+        margin-top: 2vh;
+        opacity: 80%;
+    }
+    
+    #contalternative p {
+        width: 100%;
+        height: 4vh;
+        color: white;
+        font-size: 1.4vh;
+        font-family: title;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #logosalt {
+        position: absolute;
+        width: 100%;
+        height: 8.5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3vh;
+    }
+    
+    #zaplogo, #emailogo {
+        height: 5vh;
+        width: 5vh;
+        cursor: pointer;
+    }
+
+    #audiocontrol {
+        z-index: 99;
+        height: 5vh;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 1vh;
+        bottom: -6.9vh;
+    }
+
+    #idallaudio {
+        cursor: pointer;
+        background-image: url("../images/audio-ok.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 3.5vh;
+        width: 3.5vh;
+    }
+
+    #idaudiocheck:checked + #idallaudio {
+        background-image: url("../images/audio-muted.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 3.5vh;
+        width: 3.5vh;
+    }
+
+    #idframeerror {
+        width: 100%;
+        position: absolute;
+        top: -6vh;
+        display: flex;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .classerror {
+        position: relative;
+        top: 2vh;
+        font-size: 1vh;
+        width: 100%;
+        height: 5vh;
+        color: white;
+        background-color: rgb(225, 21, 21);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5vh;
+        border-radius: 0.5vh;
+    }
+    
+    #closeerror {
+        position: absolute;
+        top: 0vh;
+        right: 0.5vh;
+        font-size: 2vh;
+        cursor: pointer;
+    }
+}

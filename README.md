@@ -1,2 +1,2 @@
-# thematic-portfolio
-Thematic portfolio template developed with Django, Javascript, html and css. (study).
+# portfoliojk
+Personal project portfolio website =)

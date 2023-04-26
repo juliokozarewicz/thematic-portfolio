@@ -1,0 +1,828 @@
+@import url("colors.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+body .content nav {
+    display: none;
+}
+
+body section {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--purple-std);
+}
+
+/* desktop */
+@media (min-width: 901px) {
+
+    body section .contentwork {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../images/work/background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: bottom;
+        width: 100%;
+        height: 100%;
+        background-color: green;
+        overflow: hidden;
+    }
+
+    body section .bee {
+        z-index: 1000;
+        position: fixed;
+        left: -20vh;
+        bottom: 50vh;
+        height: 5vh;
+        animation: bee 15s infinite, beetam 0.1s infinite;
+    }
+
+    @keyframes bee {
+
+        0% {
+            left: -20vh;
+            bottom: 20vh;
+        }
+
+        10% {
+            bottom: 50vh;
+        }
+
+        20% {
+            bottom: 60vh;
+        }
+
+        30% {
+            bottom: 30vh;
+            left: 60vh;
+        }
+
+        35% {
+            bottom: 20vh;
+            left: 70vh;
+        }
+
+        40% {
+            bottom: 10vh;
+            left: 80vh;
+        }
+
+        45% {
+            left: 90vh;
+            bottom: -20vh;
+        }
+
+        100% {
+            left: 130vh;
+            bottom: -20vh;
+        }
+        
+    }
+
+    #idbee2 {
+        z-index: 1000;
+        position: fixed;
+        left: -20vh;
+        bottom: 5vh;
+        height: 4vh;
+        animation: bee2 30s infinite, beetam 0.1s infinite;
+        animation-delay: 2s;
+        transform: rotate(-30deg);
+    }
+
+    @keyframes bee2 {
+
+        0% {
+            left: -20vh;
+            bottom: 5vh;
+        }
+
+        8% {
+            left: 15vh;
+            bottom: 60vh;
+        }
+
+        15% {
+            left: 30vh;
+            bottom: 50vh;
+        }
+
+        20% {
+            left: 55vh;
+            bottom: 30vh;
+        }
+
+        30% {
+            left: 70vh;
+            bottom: 80vh;
+        }
+
+        50% {
+            left: 100vh;
+            bottom: 140vh;
+        }
+
+        100% {
+            left: 100vh;
+            bottom: 140vh;
+        }
+        
+    }
+
+    #idbee3 {
+        z-index: 1000;
+        position: fixed;
+        height: 4vh;
+        animation: bee3 25s infinite, beetam 0.1s infinite;
+        transform: rotate(-30deg);
+    }
+
+    @keyframes bee3 {
+
+        0% {
+            left: -20vh;
+            top: 60vh;
+        }
+
+        30% {
+            top: 10vh;
+        }
+
+        50% {
+            top: 60vh;
+        }
+
+        100% {
+            left: 230vh;
+            top: 30vh;
+        }
+
+    }
+
+    @keyframes beetam {
+        from {
+            height: 5vh;
+        }
+        
+        to {
+            height: 4.5vh;
+        }
+    }
+
+    body section .contentwork .bannertop {
+        position: fixed;
+        width: 100%;
+        height: 10vh;
+        top: 5vh;
+        left: 0vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body section .contentwork .bannertop .bannertopimg {
+        width: 100vh;
+        height: 10vh;
+        overflow: hidden;
+    }
+
+    body section .contentwork .bannertop .textt {
+        z-index: 1;
+        position: absolute;
+        top: 0vh;
+        font-family: title;
+        font-size: 7vh;
+        color: var(--yellow-std2);
+    }
+
+    body section .contentwork .bannertop .textt::before {
+        z-index: -1;
+        content: "work";
+        position: absolute;
+        top: 0.5vh;
+        left: 0.5vh;
+        font-family: title;
+        font-size: 7vh;
+        color: rgb(145, 145, 145);
+    }
+
+    body section .contentwork .seework {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 53.5vh;
+    }
+
+    body section .contentwork .seework .textview {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40vh;
+        font-size: 2.6vh;
+        font-family: title;
+        color: var(--white);
+        top: -2vh;
+    }
+
+    body section .contentwork .seework .seesvg {
+        position: absolute;
+        width: 100vh;
+        height: 5vh;
+    }
+
+    body section .slideframe {
+        width: 150vh;
+        height: 20vh;
+        position: fixed;
+        top: 65vh;
+    }
+
+    body section .slideframe .sliderall {
+        white-space: nowrap;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        width: 150vh;
+        height: 20vh;
+        position: absolute;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: mandatory;
+    }
+
+    body section .slideframe .sliderall .box {
+        position: relative;
+        width: 30vh;
+        height: 20vh;
+        background-color: white;
+        display: inline-block;
+        cursor: pointer;
+        overflow: hidden;
+        margin-right: 3vh;
+        border-radius: 1.5vh;
+    }
+
+    body section .slideframe .sliderall .box:hover .cover {
+        opacity: 0%;
+    }
+
+    body section .slideframe .sliderall .box:hover .work {
+        visibility: hidden;
+    }
+
+    body section .slideframe .sliderall .box .cover {
+        position: absolute;
+        width: 30vh;
+        height: 20vh;
+        background-color: var(--yellow-std2);
+        opacity: 85%;
+        transition: 0.8s ease;
+    }
+
+    body section .slideframe .sliderall .box img {
+        object-fit: cover;
+        width: 30vh;
+        height: 20vh;
+    }
+
+    body section .slideframe .sliderall .box .work {
+        position: absolute;
+        width: 30vh;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    body section .slideframe .sliderall .box .work p {
+        z-index: 99;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        font-size: 2vh;
+        font-family: title;
+        color: black;
+    }
+
+    body section .contentwork .backframe {
+        z-index: 2;
+        position: fixed;
+        width: 5vh;
+        height: 5vh;
+        left: 18vh;
+        top: 72vh;
+        cursor: pointer;
+        border-top: solid 3vh transparent;
+        border-right: solid 3vh var(--yellow-std2);
+        border-bottom: solid 3vh transparent;
+    }
+
+    body section .contentwork .nextframe {
+        z-index: 2;
+        position: fixed;
+        right: 20vh;
+        top: 72vh;
+        cursor: pointer;
+        border-top: solid 3vh transparent;
+        border-left: solid 3vh var(--yellow-std2);
+        border-bottom: solid 3vh transparent;
+    }
+
+    section .contentwork .allaudio {
+        z-index: 2;
+        position: fixed;
+        right: 2vh;
+        bottom: 2vh;
+        cursor: pointer;
+        width: 5vh;
+        height: 4vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section .contentwork .allaudio .audio {
+        cursor: pointer;
+        position: absolute;
+        background-image: url("../images/audio-ok.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    #idaudiocheck:checked + div .audio {
+        background-image: url("../images/audio-muted.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    body section .contentwork .backhomef {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 4vh;
+        cursor: pointer;
+    }
+
+    body section .contentwork .backhomef p {
+        position: absolute;
+        font-size: 2.3vh;
+        font-family: title;
+        color: var(--yellow-std2);
+        overflow: hidden;
+        top: 1.3vh;
+    }
+
+    body section .contentwork .backhomef .backsvg {
+        width: 60vh;
+        height: 6vh;
+    }
+
+    body section .contentwork .backhomef:hover p {
+        color: var(--white);
+    }
+
+    body section .contentwork .backhomef:hover path:nth-child(1) {
+        fill: var(--red-std2);
+    }
+
+    body section .contentwork .backhomef:hover path:nth-child(2) {
+        fill: rgb(255, 120, 120);
+    }
+
+    body section .contentwork .backhomef:hover path:nth-child(3) {
+        fill: var(--red-std2);
+    }
+
+    body section .contentwork .backhomef:hover path:nth-child(4) {
+        fill: var(--red-std2);
+    }
+
+    body section .contentwork .backhomef:hover polygon {
+        fill: var(--red-std2);
+    }
+}
+
+/* ##### */
+/* other devices */
+@media (max-width: 900px) {
+
+    body section .contentwork {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../images/work/background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: right;
+        background-position-y: bottom;
+        width: 100%;
+        height: 100%;
+        background-color: green;
+        overflow: hidden;
+    }
+
+    body section .bee {
+        z-index: 1000;
+        position: fixed;
+        left: -20vh;
+        bottom: 50vh;
+        height: 5vh;
+        animation: bee 15s infinite, beetam 0.1s infinite;
+    }
+
+    @keyframes bee {
+
+        0% {
+            left: -20vh;
+            bottom: 20vh;
+        }
+
+        10% {
+            bottom: 50vh;
+        }
+
+        20% {
+            bottom: 60vh;
+        }
+
+        30% {
+            bottom: 30vh;
+            left: 60vh;
+        }
+
+        35% {
+            bottom: 20vh;
+            left: 70vh;
+        }
+
+        40% {
+            bottom: 10vh;
+            left: 80vh;
+        }
+
+        45% {
+            left: 90vh;
+            bottom: -20vh;
+        }
+
+        100% {
+            left: 130vh;
+            bottom: -20vh;
+        }
+        
+    }
+
+    #idbee2 {
+        z-index: 1000;
+        position: fixed;
+        left: -20vh;
+        bottom: 5vh;
+        height: 4vh;
+        animation: bee2 30s infinite, beetam 0.1s infinite;
+        animation-delay: 2s;
+        transform: rotate(-30deg);
+    }
+
+    @keyframes bee2 {
+
+        0% {
+            left: -20vh;
+            bottom: 5vh;
+        }
+
+        8% {
+            left: 15vh;
+            bottom: 60vh;
+        }
+
+        15% {
+            left: 30vh;
+            bottom: 50vh;
+        }
+
+        20% {
+            left: 55vh;
+            bottom: 30vh;
+        }
+
+        30% {
+            left: 70vh;
+            bottom: 80vh;
+        }
+
+        50% {
+            left: 100vh;
+            bottom: 140vh;
+        }
+
+        100% {
+            left: 100vh;
+            bottom: 140vh;
+        }
+        
+    }
+
+    #idbee3 {
+        z-index: 1000;
+        position: fixed;
+        height: 4vh;
+        animation: bee3 25s infinite, beetam 0.1s infinite;
+        transform: rotate(-30deg);
+    }
+
+    @keyframes bee3 {
+
+        0% {
+            left: -20vh;
+            top: 60vh;
+        }
+
+        30% {
+            top: 10vh;
+        }
+
+        50% {
+            top: 60vh;
+        }
+
+        100% {
+            left: 230vh;
+            top: 30vh;
+        }
+
+    }
+
+    @keyframes beetam {
+        from {
+            height: 5vh;
+        }
+        
+        to {
+            height: 4.5vh;
+        }
+    }
+
+    body section .contentwork .bannertop {
+        position: fixed;
+        width: 100%;
+        height: 10vh;
+        top: 5vh;
+        left: 0vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body section .contentwork .bannertop .bannertopimg {
+        width: 100vh;
+        height: 10vh;
+        overflow: hidden;
+    }
+
+    body section .contentwork .bannertop .textt {
+        z-index: 1;
+        position: absolute;
+        top: 0vh;
+        font-family: title;
+        font-size: 7vh;
+        color: var(--yellow-std2);
+    }
+
+    body section .contentwork .bannertop .textt::before {
+        z-index: -1;
+        content: "work";
+        position: absolute;
+        top: 0.5vh;
+        left: 0.5vh;
+        font-family: title;
+        font-size: 7vh;
+        color: rgb(145, 145, 145);
+    }
+
+    body section .contentwork .seework {
+        position: absolute;
+        top: 0vh;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body section .contentwork .seework .textview {
+        font-size: 1.8vh;
+        font-family: title;
+        color: var(--white);
+        position: fixed;
+        bottom: 36.2vh;
+    }
+
+    body section .contentwork .seework .seesvg {
+        width: 35vh;
+        height: 4vh;
+        position: fixed;
+        bottom: 35vh;
+    }
+
+    body section .slideframe {
+        position: fixed;
+        top: 0vh;
+        width: 100%;
+        height: 100%;
+    }
+
+    body section .slideframe .sliderall {
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        width: 100%;
+        height: 20vh;
+        position: absolute;
+        bottom: 11vh;
+
+        overflow-y: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: mandatory;
+    }
+
+    body section .slideframe .sliderall .box {
+        position: relative;
+        width: 30vh;
+        height: 20vh;
+        background-color: white;
+        display: inline-block;
+        cursor: pointer;
+        overflow: hidden;
+        margin-left: 6vh;
+        margin-right: 0vh;
+        border-radius: 1.5vh;
+    }
+
+    body section .slideframe .sliderall .box:hover .cover {
+        opacity: 0%;
+    }
+
+    body section .slideframe .sliderall .box:hover .work {
+        visibility: hidden;
+    }
+
+    body section .slideframe .sliderall .box .cover {
+        position: absolute;
+        width: 30vh;
+        height: 20vh;
+        background-color: var(--yellow-std2);
+        opacity: 85%;
+        transition: 0.8s ease;
+    }
+
+    body section .slideframe .sliderall .box img {
+        object-fit: cover;
+        width: 30vh;
+        height: 20vh;
+    }
+
+    body section .slideframe .sliderall .box .work {
+        position: absolute;
+        width: 30vh;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    body section .slideframe .sliderall .box .work p {
+        z-index: 99;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        font-size: 2vh;
+        font-family: title;
+        color: black;
+    }
+
+    body section .contentwork .backframe {
+        display: none;
+    }
+
+    body section .contentwork .nextframe {
+        display: none;
+    }
+
+    section .contentwork .allaudio {
+        z-index: 2;
+        position: fixed;
+        right: 0.5vh;
+        bottom: 2.9vh;
+        cursor: pointer;
+        width: 5vh;
+        height: 4vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section .contentwork .allaudio .audio {
+        cursor: pointer;
+        position: absolute;
+        background-image: url("../images/audio-ok.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 3.5vh;
+        width: 3.5vh;
+    }
+
+    #idaudiocheck:checked + div .audio {
+        background-image: url("../images/audio-muted.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 3.5vh;
+        width: 3.5vh;
+    }
+
+    body section .contentwork .backhomef {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 3vh;
+        cursor: pointer;
+    }
+
+    body section .contentwork .backhomef p {
+        position: absolute;
+        font-size: 1.8vh;
+        font-family: title;
+        color: var(--yellow-std2);
+        overflow: hidden;
+        top: 0.6vh;
+    }
+
+    body section .contentwork .backhomef .backsvg {
+        width: 38vh;
+        height: 4vh;
+    }
+
+    body section .contentwork .backhomef:hover p {
+        color: var(--white);
+    }
+
+    body section .contentwork .backhomef:hover path:nth-child(1) {
+        fill: var(--red-std2);
+    }
+
+    body section .contentwork .backhomef:hover path:nth-child(2) {
+        fill: rgb(255, 120, 120);
+    }
+
+    body section .contentwork .backhomef:hover path:nth-child(3) {
+        fill: var(--red-std2);
+    }
+
+    body section .contentwork .backhomef:hover path:nth-child(4) {
+        fill: var(--red-std2);
+    }
+
+    body section .contentwork .backhomef:hover polygon {
+        fill: var(--red-std2);
+    }
+
+}

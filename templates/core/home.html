@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block htmlhead %}
+        {% load static %}
+        <title>JULIO KOZAREWICZ</title>
+        <meta name="theme-color" content="#000000"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000000"/>
+        <meta name="msapplication-navbutton-color" content="#000000"/>
+        <link rel="stylesheet" href="{% static '/core/css/home.css' %}">
+    {% endblock htmlhead %}
+</head>
+
+{% block content %}
+    <section class="homediv">
+        <div class="paralax">
+            <div class="backgroundstars1" value="2"></div>
+            <div class="backgroundstars2" value="1"></div>
+            <div class="backgroundstars2" value="3"></div>
+            <div class="backgroundstars3" value="6"></div>
+            <div class="backgroundstars3" value="-1"></div>
+            <div class="backgroundstars4" value="-2"></div>
+            <div class="backgroundstars5" value="2"></div>
+            <div class="backgroundstars6" value="-1"></div>
+            <div class="rocket">
+                <img src="{% static '/core/images/rocket-body.svg' %}" value="2" class="rocket-body">
+                <img src="{% static '/core/images/rocket-fire-red.svg' %}" value="2" class="fire-red">
+                <img src="{% static '/core/images/rocket-fire-orange.svg' %}" value="2" class="fire-orange">
+            </div>
+            <img src="{% static '/core/images/moon.svg' %}" value="1" class="moon">
+        </div>
+        <div class="shooting-star1"></div>
+        <div class="shooting-star2"></div>
+        <div class="shooting-star3"></div>
+        <div class="shooting-star4"></div>
+        <div class="social">
+            <div class="uno github"><img onclick="window.open('https://github.com/juliokozarewicz', '_blank');" class="imgsocial" src="{% static '/core/images/github.svg' %}"></div>
+            <div class="uno linkedin"><img onclick="window.open('https://www.linkedin.com/in/julioerk', '_blank');" class="linkedin imgsocial" src="{% static '/core/images/linkedin.svg' %}"></div>
+            <div class="uno instagram"><img onclick="window.open('https://www.instagram.com/edukozarew', '_blank');" class="instagram imgsocial" src="{% static '/core/images/insta.svg' %}"></div>
+            <div class="linev-mid"></div>
+            <div class="uno mode"><img class="theme imgsocial" src="{% static '/core/images/darkmode-on.svg' %}"></div>
+            <div class="linev-bottom"></div>
+        </div>
+        <h1 class="title">Hi, I’m Julio</h1>
+        <h2 class="sub-title">I design and develop a lot of <br> things for the internet.</h2>
+        <p class="meta-art"><b class="one">&lt;</b><b>meta</b> <b class="trr">name</b><b class="two">=</b>"description" <b  class="trr">content</b><b class="two">=</b>"Remember to look up at the stars and not down at your feet. <br>Try to make sense of what you see and wonder about what makes the universe exist. (Stephen Hawking)"<b class="one">/&gt;</b></p>
+        <div class="transition"></div>
+    </section>
+{% endblock %}
+
+</html>

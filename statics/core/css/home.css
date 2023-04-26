@@ -1,0 +1,846 @@
+@import url("colors.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* desktop */
+@media (min-width: 901px) {
+
+    body .homediv {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+    }
+
+    body .homediv {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+    }
+
+    body .homediv::before {
+        width: 100%;
+        height: 100vh;
+        content: "";
+        background-image: url("../images/stars-fixed.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+        opacity: 30%;
+    }
+
+    body section .homediv .social {
+        z-index: 10;
+        width: 10vh;
+        height: 36vh;
+        font-size: 10vh;
+        font-family: title;
+        position: fixed;
+        bottom: 0vh;
+        left: 4vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    body section .homediv .social .linev-mid {
+        width: 0.3vh;
+        height: 7vh;
+        background-color: var(--purple-std);
+    }
+
+    body section .homediv .social .uno {
+        height: 4vh;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body section .homediv .social .uno .imgsocial {
+        height: 100%;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    body section .homediv .social .uno:hover {
+        animation: anibut 0.5s forwards;
+    }
+
+    @keyframes anibut {
+
+        0% {
+            height: 4vh;
+
+        }
+
+        10% {
+            height: 7vh;
+        }
+
+        100% {
+            height: 10vh;
+        }
+        
+    }
+
+    body section .homediv .social .linev-bottom {
+        width: 0.3vh;
+        height: 3vh;
+        background-color: var(--purple-std);
+    }
+
+    body section .homediv .title {
+        z-index: 5;
+        font-size: 7vh;
+        font-family: title;
+        position: fixed;
+        bottom: 28.5vh;
+        left: 20vh;
+        color: var(--red-std);
+    }
+
+    body section .homediv .sub-title {
+        font-size: 2.6vh;
+        font-family: title;
+        position: fixed;
+        bottom: 21vh;
+        left: 20vh;
+        color: var(--white-std);
+    }
+
+    body section .homediv .meta-art {
+        font-size: 1.5vh;
+        font-family: text;
+        position: fixed;
+        bottom: 4.5vh;
+        left: 20vh;
+    }
+
+    body section .homediv .meta-art .one {
+        color: var(--red-std2);
+    }
+
+    body section .homediv .meta-art .two {
+        color: var(--yellow-std2);
+    }
+
+    body section .homediv .meta-art .trr {
+        color: var(--purple-std);
+    }
+
+    body section .shooting-star1 {
+        border-radius: 50%;
+        position: absolute;
+        top: 3vh;
+        left: 30vh;
+        transform-origin: left center;
+        animation-name: shooting-star;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        animation-delay: 1s;
+        transform: rotate(20deg);
+    }
+
+    body section .shooting-star2 {
+        border-radius: 50%;
+        position: absolute;
+        top: 50vh;
+        left: 150vh;
+        transform-origin: left center;
+        animation-name: shooting-star2;
+        animation-iteration-count: infinite;
+        animation-duration: 8s;
+        transform: rotate(130deg);
+    }
+
+    body section .shooting-star3 {
+        border-radius: 50%;
+        position: absolute;
+        top: 20vh;
+        left: 80vh;
+        transform-origin: left center;
+        animation-name: shooting-star3;
+        animation-iteration-count: infinite;
+        animation-duration: 8s;
+        transform: rotate(80deg);
+    }
+
+    body section .shooting-star4 {
+        border-radius: 50%;
+        position: absolute;
+        top: 75vh;
+        left: 190vh;
+        transform-origin: left center;
+        animation-name: shooting-star3;
+        animation-iteration-count: infinite;
+        animation-duration: 6s;
+        transform: rotate(-200deg);
+        animation-delay: 2s;
+    }
+
+    @keyframes shooting-star {
+
+        90% {
+            background-color: white;
+            width: 0.1vh;
+            height: 0.4vh;
+            opacity: 100%;
+        }
+
+        100% {
+            background-color: white;
+            width: 0.1vh;
+            height: 30vh;
+            opacity: 0%;
+        }
+        
+    }
+
+    @keyframes shooting-star2 {
+
+        70% {
+            background-color: white;
+            width: 0.1vh;
+            height: 0.1vh;
+            opacity: 100%;
+        }
+
+        100% {
+            background-color: white;
+            width: 30vh;
+            height: 0.1vh;
+            opacity: 0%;
+        }
+        
+    }
+
+        @keyframes shooting-star3 {
+
+        0% {
+            background-color: white;
+            width: 0.1vh;
+            height: 0.1vh;
+            opacity: 100%;
+        }
+
+        30% {
+            background-color: white;
+            width: 30vh;
+            height: 0.1vh;
+            opacity: 0%;
+        }
+
+        100% {
+            opacity: 0%;
+        }
+        
+    }
+
+    body .paralax {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body .moon { 
+        width: 13vh;
+        position: absolute;
+        bottom: 70vh;
+        left: 62%;
+    }
+
+    body .backgroundstars1 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars2 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-2.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars3 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-3.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars4 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-4.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars5 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-5.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars6 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-6.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body section .rocket {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 30vh;
+        left: 50%;
+        transform: rotate(2deg);
+        animation: 30s rocket infinite;
+    }
+
+    @keyframes rocket {
+        0% {
+            bottom: 30vh;
+            left: 50%;
+        }
+
+        30% {
+            bottom: 35vh;
+            left: 45%;
+        }
+
+        60% {
+            bottom: 35vh;
+            left: 55%;
+        }
+
+        100% {
+            bottom: 30vh;
+            left: 50%;
+        }
+    }
+
+    body section .rocket .rocket-body {
+        height: 10vh;
+        position: absolute;
+        top: -14vh;
+        left: 0.9vh;
+        animation: 0.1s rocketsize infinite;
+    }
+
+    @keyframes rocketsize {
+        from {
+            height: 10vh;
+        }
+
+        to {
+            height: 9.4vh;
+        }
+    }
+
+    body section .rocket .fire-red {
+        height: 8vh;
+        position: absolute;
+        animation: 0.3s size-fire-red infinite;
+    }
+
+    @keyframes size-fire-red {
+
+        from {
+            width: 2vh;
+        }
+
+        to {
+            width: 12vh;
+            height: 11vh;
+            opacity: 10%;
+        }
+        
+    }
+
+    body section .rocket .fire-orange {
+        height: 5vh;
+        position: absolute;
+        top: -4vh;
+        right: -3vh;
+        animation: 0.2s size-fire-orange infinite;
+    }
+
+    @keyframes size-fire-orange {
+
+        from {
+            width: 0.5vh;
+        }
+
+        to {
+            width: 5vh;
+            opacity: 30%;
+        }
+        
+    }
+}
+
+/* ##### */
+/* other devices */
+@media (max-width: 900px) {
+
+    body .homediv {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+    }
+
+    body .homediv {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+    }
+
+    body .homediv::before {
+        width: 100%;
+        height: 100vh;
+        content: "";
+        background-image: url("../images/stars-fixed.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+        opacity: 30%;
+    }
+
+    body section .homediv .social {
+        z-index: 10;
+        width: 100%;
+        height: 6vh;
+        position: fixed;
+        bottom: 3vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    body section .homediv .social .linev-mid {
+        display: none;
+    }
+
+    body section .homediv .social .uno {
+        height: 5vh;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    body section .homediv .social .uno .imgsocial {
+        height: 100%;
+        cursor: pointer;
+        position: relative;
+    }
+
+    body section .homediv .social .uno:hover {
+        animation: anibut 0.5s forwards;
+    }
+
+    @keyframes anibut {
+
+        0% {
+            height: 4vh;
+
+        }
+
+        100% {
+            height: 6vh;
+        }
+        
+    }
+
+    body section .homediv .social .linev-bottom {
+        display: none;
+    }
+
+    body section .homediv .title {
+        z-index: 5;
+        width: 100%;
+        text-align: center;
+        font-size: 5vh;
+        font-family: title;
+        position: fixed;
+        bottom: 24vh;
+        color: var(--red-std);
+    }
+
+    body section .homediv .sub-title {
+        text-align: center;
+        width: 100%;
+        font-size: 2.6vh;
+        font-family: title;
+        position: fixed;
+        bottom: 17vh;
+        color: var(--white-std);
+    }
+
+    body section .homediv .meta-art {
+        width: 100%;
+        text-align: center;
+        font-size: 1vh;
+        font-family: text;
+        position: fixed;
+        bottom: 12vh;
+        display: none;
+    }
+
+    body section .homediv .meta-art .one {
+        color: var(--red-std2);
+    }
+
+    body section .homediv .meta-art .two {
+        color: var(--yellow-std2);
+    }
+
+    body section .homediv .meta-art .trr {
+        color: var(--purple-std);
+    }
+
+    body section .shooting-star1 {
+        border-radius: 50%;
+        position: absolute;
+        top: 3vh;
+        left: 5vh;
+        transform-origin: left center;
+        animation-name: shooting-star;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        animation-delay: 1s;
+        transform: rotate(20deg);
+        opacity: 30%;
+    }
+
+    body section .shooting-star2 {
+        border-radius: 50%;
+        position: absolute;
+        top: 25vh;
+        left: 15vh;
+        transform-origin: left center;
+        animation-name: shooting-star2;
+        animation-iteration-count: infinite;
+        animation-duration: 8s;
+        transform: rotate(130deg);
+        opacity: 30%;
+    }
+
+    body section .shooting-star3 {
+        border-radius: 50%;
+        position: absolute;
+        top: 40vh;
+        left: 20vh;
+        transform-origin: left center;
+        animation-name: shooting-star3;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        transform: rotate(80deg);
+        opacity: 30%;
+    }
+
+    body section .shooting-star4 {
+        border-radius: 50%;
+        position: absolute;
+        top: 50vh;
+        left: 40vh;
+        transform-origin: left center;
+        animation-name: shooting-star3;
+        animation-iteration-count: infinite;
+        animation-duration: 6s;
+        transform: rotate(-200deg);
+        animation-delay: 2s;
+        opacity: 30%;
+    }
+
+    @keyframes shooting-star {
+
+        90% {
+            background-color: white;
+            width: 0.1vh;
+            height: 0.4vh;
+            opacity: 40%;
+        }
+
+        100% {
+            background-color: white;
+            width: 0.1vh;
+            height: 30vh;
+            opacity: 0%;
+        }
+        
+    }
+
+    @keyframes shooting-star2 {
+
+        70% {
+            background-color: white;
+            width: 0.1vh;
+            height: 0.1vh;
+            opacity: 40%;
+        }
+
+        100% {
+            background-color: white;
+            width: 30vh;
+            height: 0.1vh;
+            opacity: 0%;
+        }
+        
+    }
+
+        @keyframes shooting-star3 {
+
+        0% {
+            background-color: white;
+            width: 0.1vh;
+            height: 0.1vh;
+            opacity: 40%;
+        }
+
+        30% {
+            background-color: white;
+            width: 30vh;
+            height: 0.1vh;
+            opacity: 0%;
+        }
+
+        100% {
+            opacity: 0%;
+        }
+        
+    }
+
+    body .paralax {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body .moon { 
+        width: 9vh;
+        position: absolute;
+        bottom: 70vh;
+    }
+
+    body .backgroundstars1 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars2 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-2.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars3 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-3.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars4 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-4.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars5 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-5.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body .backgroundstars6 { 
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/stars-6.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        position: absolute;
+    }
+
+    body section .rocket {
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 40%;
+        animation: 30s rocket infinite;
+    }
+
+    @keyframes rocket {
+        0% {
+            height: 2vh;
+            bottom: 35vh;
+            left: 50%;
+        }
+
+        30% {
+            bottom: 45vh;
+            left: 35%;
+        }
+
+        60% {
+            bottom: 35vh;
+            left: 55%;
+        }
+
+        100% {
+            height: 2vh;
+            bottom: 35vh;
+            left: 50%;
+        }
+    }
+
+    body section .rocket .rocket-body {
+        position: absolute;
+        top: -14vh;
+        left: 0.9vh;
+        animation: 0.1s rocketsize infinite;
+    }
+
+    @keyframes rocketsize {
+        from {
+            height: 6vh;
+        }
+
+        to {
+            height: 5.4vh;
+        }
+    }
+
+    body section .rocket .fire-red {
+        height: 8vh;
+        position: absolute;
+        top: -11vh;
+        right: -2.7vh;
+        animation: 0.3s size-fire-red infinite;
+    }
+
+    @keyframes size-fire-red {
+
+        from {
+            width: 0.5vh;
+        }
+
+        to {
+            width: 6vh;
+            height: 11vh;
+            opacity: 10%;
+        }
+        
+    }
+
+    body section .rocket .fire-orange {
+        height: 5vh;
+        position: absolute;
+        top: -9vh;
+        right: -2.1vh;
+        animation: 0.2s size-fire-orange infinite;
+    }
+
+    @keyframes size-fire-orange {
+
+        from {
+            width: 0.3vh;
+        }
+
+        to {
+            width: 3vh;
+            opacity: 30%;
+        }
+        
+    }
+}

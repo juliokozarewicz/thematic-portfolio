@@ -1,0 +1,387 @@
+@import url("colors.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body .content nav {
+    display: none;
+}
+
+body section {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--purple-std);
+}
+
+body section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+body section .contentabout {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/about/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: center;
+    width: 100%;
+    height: 100vh;
+}
+
+body section .contentabout .tremg {
+    position: fixed;
+    width: 100%;
+    height: 0.1vh;
+    bottom: 9vh;
+}
+
+body section .contentabout .tremg::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 0.1vh;
+    bottom: 9vh;
+    background-color: #10100e;
+    opacity: 10%;
+}
+
+body section .contentabout .tremg .station {
+    position: absolute;
+    height: 5vh;
+    bottom: 0vh;
+    right: 40vh;
+}
+
+body section .contentabout .tremg .tremall {
+    position: absolute;
+    height: 2vh;
+    bottom: 0vh;
+    animation-name: tremall;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes tremall {
+    0% {
+        right: -20vh;
+    }
+
+    30% {
+        right: 57vh;
+    }
+
+    35% {
+        right: 57vh;
+    }
+
+    100% {
+        right: 260vh;
+    }
+}
+
+body section .contentabout .tremg .tremall .trem {
+    position: absolute;
+    height: 2vh;
+    bottom: 0vh;
+}
+
+body section .contentabout .tremg .tremall .luz {
+    position: absolute;
+    height: 2vh;
+    right: 0.5vh;
+}
+
+body section .contentabout .tremg .station2 {
+    position: absolute;
+    height: 5vh;
+    bottom: -5vh;
+    right: 40vh;
+    opacity: 40%;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+body section .contentabout .tremg .tremall .trem2 {
+    position: absolute;
+    height: 2vh;
+    opacity: 40%;
+    bottom: -2vh;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+body section .contentabout .tremg .tremall .luz2 {
+    position: absolute;
+    height: 2vh;
+    opacity: 40%;
+    bottom: -2vh;
+    right: 0.5vh;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+body section .contentabout .text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 75vh;
+    height: auto;
+    top: 5vh;
+    background-color: var(--red-std);
+    box-shadow: -1vh 0 0 0 var(--red-std),
+                1vh 0 0 0 var(--red-std),
+                0 -1vh 0 0 var(--red-std),
+                0 1vh 0 0 var(--red-std);
+    opacity: 95%;
+}
+
+body section .contentabout .text h1 {
+    width: 100%;
+    font-size: 3vh;
+    color: var(--white);
+    font-family: title;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+body section .contentabout .text .parag {
+    width: 90%;
+    font-size: 2vh;
+    color: var(--white);
+    font-family: title;
+    text-align: justify;
+    line-height: 1.8;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+body section .contentabout .text .develop {
+    width: 90%;
+    font-size: 1.7vh;
+    color: var(--white);
+    font-family: title;
+    text-align: justify;
+    margin-bottom: 3vh;
+}
+
+section .contentabout .allaudio {
+    z-index: 2;
+    position: absolute;
+    bottom: 2vh;
+    right: 2vh;
+    cursor: pointer;
+    width: 5vh;
+    height: 4vh;
+    color: var(--yellow-std2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .contentabout .allaudio .audio {
+    cursor: pointer;
+    position: absolute;
+    background-image: url("../images/audio-ok.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 5vh;
+    width: 5vh;
+}
+
+#idaudiocheck:checked + div .audio {
+    background-image: url("../images/audio-muted.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 5vh;
+    width: 5vh;
+}
+
+section .backmain {
+    position: absolute;
+    left: 0vh;
+    bottom: -7vh;
+    width: 75vh;
+    height: 4vh;
+    background-color: var(--yellow-std2);
+    box-shadow: -1vh 0 0 0 var(--yellow-std2),
+                1vh 0 0 0 var(--yellow-std2),
+                0 -1vh 0 0 var(--yellow-std2),
+                0 1vh 0 0 var(--yellow-std2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vh;
+    font-family: title;
+    color: var(--black);
+    cursor: pointer;
+}
+
+section .backmain:hover {
+    background-color: var(--black);
+    box-shadow: -1vh 0 0 0 var(--black),
+                1vh 0 0 0 var(--black),
+                0 -1vh 0 0 var(--black),
+                0 1vh 0 0 var(--black);
+    color: var(--yellow-std2);
+}
+
+/* ##### */
+/* other devices */
+@media (max-width: 900px) {
+
+    body section .contentabout .text {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: auto;
+        top: 5vh;
+        background-color: var(--red-std);
+        box-shadow: -1vh 0 0 0 var(--red-std),
+                    1vh 0 0 0 var(--red-std),
+                    0 -1vh 0 0 var(--red-std),
+                    0 1vh 0 0 var(--red-std);
+        opacity: 95%;
+    }
+
+    body section .contentabout .text h1 {
+        position: relative;
+        width: 100%;
+        font-size: 2vh;
+        color: var(--white);
+        font-family: title;
+        text-align: center;
+        margin-top: 2vh;
+    }
+    
+    body section .contentabout .text .parag {
+        position: relative;
+        width: 90%;
+        font-size: 1.5vh;
+        color: var(--white);
+        font-family: title;
+        text-align: justify;
+        line-height: 1.8;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+    
+    body section .contentabout .text .develop {
+        position: relative;
+        width: 90%;
+        font-size: 1.5vh;
+        color: var(--white);
+        font-family: title;
+        text-align: justify;
+        margin-bottom: 2vh;
+    }
+
+    section .backmain {
+        position: absolute;
+        left: 0vh;
+        bottom: -6vh;
+        width: 100%;
+        height: 3vh;
+        background-color: var(--yellow-std2);
+        box-shadow: -1vh 0 0 0 var(--yellow-std2),
+                    1vh 0 0 0 var(--yellow-std2),
+                    0 -1vh 0 0 var(--yellow-std2),
+                    0 1vh 0 0 var(--yellow-std2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vh;
+        font-family: title;
+        color: var(--black);
+        cursor: pointer;
+    }
+
+    body section .contentabout {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../images/about/background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: left;
+        background-position-y: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    body section .contentabout .tremg {
+        position: fixed;
+        width: 100vh;
+        height: 0.1vh;
+        bottom: 8vh;
+    }
+
+    body section .contentabout .tremg::after {
+        display: none;
+    }
+
+    section .contentabout .allaudio {
+        z-index: 2;
+        position: absolute;
+        bottom: 8vh;
+        right: 1vh;
+        cursor: pointer;
+        width: 5vh;
+        height: 4vh;
+        color: var(--yellow-std2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section .contentabout .allaudio .audio {
+        cursor: pointer;
+        position: absolute;
+        background-image: url("../images/audio-ok.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 4vh;
+        width: 4vh;
+    }
+    
+    #idaudiocheck:checked + div .audio {
+        background-image: url("../images/audio-muted.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 4vh;
+        width: 4vh;
+    }
+
+}

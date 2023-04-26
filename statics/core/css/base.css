@@ -1,0 +1,448 @@
+@import url("colors.css");
+
+@font-face {
+    font-family: 'title';
+    src: url('../fonts/title.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'text';
+    src: url('../fonts/text.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* desktop */
+@media (min-width: 901px) {
+
+    body .content {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    body section nav .menuall {
+        position: fixed;
+        z-index: 11;
+        bottom: 5vh;
+        right: 7.5vh;
+        width: 7vh;
+        height: 7vh;
+        background-color: var(--red-std);
+        box-shadow: -0.7vh 0 0 0 var(--red-std),
+                    0.7vh 0 0 0 var(--red-std),
+                    0 -0.7vh 0 0 var(--red-std),
+                    0 0.7vh 0 0 var(--red-std);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes menuopen {
+
+        0% {
+            width: 7vh;
+            height: 7vh;
+        }
+
+        10% {
+            height: 7vh;
+            width: 50vh;
+        }
+
+        100% {
+            width: 30vh;
+            height: 49vh;
+        }
+
+    }
+
+    @keyframes menuclose {
+
+        0% {
+            width: 30vh;
+            height: 49vh;
+        }
+
+        30% {
+            height: 7vh;
+            width: 50vh;
+        }
+
+        100% {
+            height: 7vh;
+            width: 7vh;
+        }
+
+    }
+
+    body section nav .menuall .mhamb {
+        position: absolute;
+        bottom: 1.4vh;
+        right: 0vh;
+        width: 7vh;
+        height: 4.2vh;
+        z-index: 12;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: 1s ease;
+    }
+
+    body section nav .menuall .mhamb .line1, .line2, .line3 {
+        width: 70%;
+        height: 0.8vh;
+        background-color: var(--black-std2);
+        position: relative;
+        border-radius: 1vh;
+        transition: 0.8s ease;
+    }
+
+    body section nav .menuall .mhamb2 {
+        right: 11vh;
+        transition: 0.8s ease;
+    }
+
+    body section nav .menuall .mhamb .line11{
+        position: absolute;
+        transform: rotate(-135deg);
+        bottom: 2vh;
+        transition: 0.5s ease;
+    }
+
+    body section nav .menuall .mhamb .line12{
+        position: absolute;
+        bottom: 2vh;
+        opacity: 0%;
+        transition: 0.2s ease;
+    }
+
+    body section nav .menuall .mhamb .line13{
+        position: absolute;
+        transform: rotateZ(135deg);
+        bottom: 2vh;
+        transition: 0.5s ease;
+    }
+
+    body section nav .menuall .menulist {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 1vh;
+        width: 80%;
+    }
+
+    body section nav .menuall .menulist a {
+        width: 100%;
+        height: 5vh;
+        text-decoration: none;
+        color: var(--black);
+        font-size: 3.5vh;
+        font-family: title;
+        margin-top: 1vh;
+        padding: auto;
+        transition: 0.5s ease;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    body section nav .menuall .menulist .menu {
+        width: 100%;
+        height: 5vh;
+        text-decoration: none;
+        color: var(--black);
+        font-size: 3.5vh;
+        font-family: title;
+        margin-top: 1vh;
+        padding: auto;
+        transition: 1s ease;
+        text-align: center;
+    }
+
+    body section nav .menuall .menulist .sep {
+        color: black;
+        font-size: 3vh;
+    }
+
+    body section nav .menuall .menulist a:hover {
+        background-color: var(--black);
+        color: var(--white-std);
+        box-shadow: -0.4vh 0 0 0 var(--black),
+            0.4vh 0 0 0 var(--black),
+            0 -0.4vh 0 0 var(--black),
+            0 0.4vh 0 0 var(--black);
+    }
+
+    body .content .load-content {
+        width: 100%;
+        height: 100vh;
+    }
+
+    body section .transition {
+        z-index: 100;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--white);
+        animation-name: transit;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes transit {
+        0% {
+            opacity: 100%;
+            z-index: 99;
+        }
+        
+        20% {
+            opacity: 70%;
+        }
+
+        99% {
+            opacity: 0%;
+        }
+
+        100% {
+            z-index: 0;
+            background: no-repeat;
+            display: none;
+            z-index: -1;
+        }
+    }
+
+}
+
+/* ##### */
+/* other devices */
+@media (max-width: 900px) {
+
+    body .content {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    body section nav .menuall {
+        position: fixed;
+        z-index: 11;
+        top: 3vh;
+        right: 2vh;
+        width: 5vh;
+        height: 5vh;
+        background-color: var(--red-std);
+        box-shadow: -0.7vh 0 0 0 var(--red-std),
+                    0.7vh 0 0 0 var(--red-std),
+                    0 -0.7vh 0 0 var(--red-std),
+                    0 0.7vh 0 0 var(--red-std);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes menuopen {
+
+        0% {
+            width: 5vh;
+            height: 5vh;
+        }
+
+        10% {
+            height: 7vh;
+            width: 40vh;
+        }
+
+        100% {
+            width: 30vh;
+            height: 49vh;
+        }
+
+    }
+
+    @keyframes menuclose {
+
+        0% {
+            width: 30vh;
+            height: 49vh;
+        }
+
+        30% {
+            height: 7vh;
+            width: 40vh;
+        }
+
+        100% {
+            height: 5vh;
+            width: 5vh;
+        }
+
+    }
+
+    body section nav .menuall .mhamb {
+        position: absolute;
+        top: 0.7vh;
+        right: -0.5vh;
+        width: 6vh;
+        height: 3.5vh;
+        z-index: 12;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: 1s ease;
+    }
+
+    body section nav .menuall .mhamb .line1, .line2, .line3 {
+        width: 70%;
+        height: 0.8vh;
+        background-color: var(--black-std2);
+        position: relative;
+        border-radius: 1vh;
+        transition: 0.8s ease;
+    }
+
+    body section nav .menuall .mhamb2 {
+        right: 12vh;
+        top: 2vh;
+        transition: 0.7s ease;
+    }
+
+    body section nav .menuall .mhamb .line11{
+        position: absolute;
+        transform: rotate(-135deg);
+        bottom: 2vh;
+        transition: 0.3s ease;
+    }
+
+    body section nav .menuall .mhamb .line12{
+        position: absolute;
+        bottom: 2vh;
+        opacity: 0%;
+        transition: 0.2s ease;
+    }
+
+    body section nav .menuall .mhamb .line13{
+        position: absolute;
+        transform: rotateZ(135deg);
+        bottom: 2vh;
+        transition: 0.3s ease;
+    }
+
+    body section nav .menuall .menulist {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 7vh;
+        width: 80%;
+    }
+
+    body section nav .menuall .menulist a {
+        width: 100%;
+        height: 5vh;
+        text-decoration: none;
+        color: var(--black);
+        font-size: 3.5vh;
+        font-family: title;
+        margin-top: 1vh;
+        padding: auto;
+        transition: 0.5s ease;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    body section nav .menuall .menulist .menu {
+        width: 100%;
+        height: 5vh;
+        text-decoration: none;
+        color: var(--black);
+        font-size: 3.5vh;
+        font-family: title;
+        margin-top: 1vh;
+        padding: auto;
+        transition: 1s ease;
+        text-align: center;
+    }
+
+    body section nav .menuall .menulist .sep {
+        color: black;
+        font-size: 3vh;
+    }
+
+    body section nav .menuall .menulist a:hover {
+        background-color: var(--black);
+        color: var(--white-std);
+        box-shadow: -0.4vh 0 0 0 var(--black),
+            0.4vh 0 0 0 var(--black),
+            0 -0.4vh 0 0 var(--black),
+            0 0.4vh 0 0 var(--black);
+    }
+
+    body .content .load-content {
+        width: 100%;
+        height: 100vh;
+    }
+
+    body section .transition {
+        z-index: 100;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--white);
+        animation-name: transit;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes transit {
+        0% {
+            opacity: 100%;
+            z-index: 99;
+        }
+        
+        20% {
+            opacity: 70%;
+        }
+
+        99% {
+            opacity: 0%;
+        }
+
+        100% {
+            z-index: 0;
+            background: no-repeat;
+            display: none;
+            z-index: -1;
+        }
+    }
+}

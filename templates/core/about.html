@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block htmlhead %}
+        {% load static %}
+        <title>JULIO KOZAREWICZ - About</title>
+        <meta name="theme-color" content="#000000"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000000"/>
+        <meta name="msapplication-navbutton-color" content="#000000"/>
+        <link rel="stylesheet" href="{% static '/core/css/about.css' %}">
+        <link rel="stylesheet" href="{% static '/core/css/baseabout.css' %}">
+    {% endblock htmlhead %}
+</head>
+
+{% block content %}
+    <section>
+        <div class="contentabout" >
+            <div class="tremg">
+                <img src="{% static '/core/images/about/station.png' %}" class="station">
+                <img src="{% static '/core/images/about/station.png' %}" class="station2">
+                <div class="tremall">
+                    <img src="{% static '/core/images/about/trem.png' %}" class="trem">
+                    <img src="{% static '/core/images/about/trem.png' %}" class="trem2">
+                    <img src="{% static '/core/images/about/luz.png' %}" class="luz">
+                    <img src="{% static '/core/images/about/luz.png' %}" class="luz2">
+                </div>
+            </div>
+            <div class="text">
+                <div onclick="location.href='/'" class="backmain">*** BACK TO MAIN PAGE ***</div>
+                <h1>Hello, my name is Julio Kozarewicz!</h1>
+                <p class="parag">I'm a web developer with skills in graphic design, photography and music. I confess that I always liked these nerdy things, such as technology, art, science fiction and also mathematics. So, I decided to use all my knowledge to create things for the internet. I truly enjoy adding a "feeling" to my projects, and I do this by utilizing various ideas that I have learned in classes and, mostly, from my own experiences.</p>
+                <p class="develop"><b>What I use to develop:</b> Python, Django, FastAPI, SQL, NoSQL, HTML, CSS and Javascript.</p>
+                <p class="develop"><b>What I develop:</b> Website, web app, logos and visual identity of companies and people.</p>
+                <p class="develop"><b>Tools I use:</b> Linux, Git, Vim, Visual Studio Code, Figma, Coreldraw and Photoshop.</p>
+            </div>
+            <input style="display: none;" type="checkbox" id="idaudiocheck" onclick="change('idaudiocheck', 'idsong')"></input>
+            <div class="allaudio"><label for="idaudiocheck" class="audio"></label></div>
+        </div>
+        <div class="transition"></div>
+        <audio id="idsong" class="song" autoplay>
+            <source src="{% static '/core/media/about.mp3' %}" type="audio/mp3" />
+        </audio>
+    </section>
+{% endblock %}
+
+</html>
